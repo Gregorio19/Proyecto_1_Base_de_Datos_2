@@ -1,0 +1,63 @@
+2 B.  Establecer Correspondencias
+
+Hecho1: Solicitudes entregadas.
+La tabla “intem “se relaciona con la perspectiva  “Solicitud”. 
+La tabla “Tipo_Servicio “se relaciona con la perspectiva  “Tipo de Servicio”.
+El campo  “HIS_FECHA_INICIO”  y   el campo  “HIS_FECHA_FIN” de la tabla “inten_Historico “se relacionan con el indicador “Tiempo promedio “.
+
+Hecho2: Obras realizadas.
+La tabla “Persona “se relaciona con la perspectiva  “Trabajador”. 
+La tabla “Localidad “se relaciona con la perspectiva  “área”.
+El campo “HIS_FECHA_INICIO “de la tabla  “intem_Historico” se relaciona con la perspectiva  “Tiempo”.
+La tabla “Item “se relacionan con el indicador “Tiempo promedio “.
+
+Hecho3: Material.
+La tabla “Material “se relaciona con la perspectiva  “material”.
+El campo “FMO_FECHA “de la tabla “Formato” se relaciona con la perspectiva  “Tiempo”.
+El campo “MTL_CANTIDAD “de la tabla “Material” se relaciona con el indicador  “Cantidad de material”.
+
+Hecho4.1: Ocupación de personal
+La tabla “Persona “se relaciona con la perspectiva  “Trabajador”.
+El campo “FMO_FECHA “ de la tabla “Formato” se relaciona con la perspectiva  “Tiempo”.
+La tabla “Formato“se relaciona con el indicador  “Porcentaje de Ocupación”.
+
+Hecho4.2: Ocupación de personal
+La tabla “Persona “se relaciona con la perspectiva  “Trabajador”.
+El campo “FMO_FECHA “ de la tabla “Formato” se relaciona con la perspectiva  “Tiempo”.
+La tabla “Formato“se relaciona con el indicador  “Cantidad de Proyectos”.
+
+Hecho5.1: Falla
+La tabla “Item “se relaciona con la perspectiva  “Falla”.
+La tabla “Localidad “se relaciona con la perspectiva  “localidad”.
+El campo “HIS_FECHA_FIN“ de la tabla “Item_Historico” se relaciona con la indicador “Tiempo_transcurrido”.
+
+Hecho5.2: Falla
+La tabla “Item “se relaciona con la perspectiva  “Falla”.
+La tabla “Localidad “se relaciona con la perspectiva  “localidad”.
+El campo “HIS_FECHA_FIN“ de la tabla “Item_Historico” se relaciona con la indicador “Tiempo_transcurrido”.
+
+Hecho5.3: Falla
+La tabla “Item “se relaciona con la perspectiva  “Falla”.
+La tabla “Localidad “se relaciona con la perspectiva  “localidad”.
+La tabla “Item “se relaciona con la indicador “Cantidad de falla”.
+
+Hecho6: Costo
+La tabla “Centro “se relaciona con la perspectiva  “centro”.
+La tabla “Formato“ se relaciona con la perspectiva  “Solicitud.
+El campo “CTR_ID_CENTO“ de la tabla “Centro” y el campo “FMO_CODIGO“ de la tabla “Formato”  se relaciona con la indicador “Porcentaje  centro ”.
+
+Hecho7: Falla
+La tabla “Item “se relaciona con la perspectiva  “Falla”.
+El campo “HIS_FECHA_INICIO “de la tabla  “intem_Historico” se relaciona con la perspectiva  “Tiempo”.
+El campo “HIS_OBSERVACION“ de la tabla “Item_Historico” se relaciona con la indicador “Cantidad de tipos”.
+
+Hecho8 // hay una modificación  y vericar hecho 7 por  cantidad de tipos de  falla
+
+Hecho9: Solicitudes
+La tabla “Estatus “se relaciona con la perspectiva  “Estatus”.
+El campo “HIS_FECHA_INICIO “de la tabla  “intem_Historico” se relaciona con la perspectiva  “Tiempo”.
+La tabla “Item_Historico” se relaciona con el indicador “Cantidad de Solicitudes”.
+
+Hecho10: Atención:
+La tabla “centro “se relaciona con la perspectiva  “Centro de costo”.
+El campo  “HIS_FECHA_INICIO”  y   el campo  “HIS_FECHA_FIN” de la tabla “inten_Historico “se relacionan con el indicador “Tiempo de atención “.
