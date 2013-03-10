@@ -1,0 +1,129 @@
+Porcentaje de costo que presenta cada centro por solicitudes de servicios generales.
+ 
+Hecho6: Costo
+
+Correspondencia
+
+La tabla “Centro “se relaciona con la perspectiva  “centro”.
+La tabla “Formato“ se relaciona con la perspectiva  “Solicitudes”.
+El campo “CTR_ID_CENTO“ de la tabla “Centro” y el campo “FMO_CODIGO“ de la tabla “Formato”  se relaciona con la indicador “Porcentaje  centro ”.
+
+
+Granularidad
+
+Perspectiva  “Centro”.
+”CTR_ID_CENTRO” de la tabla ”Centro”. Ya que este hace referencia al
+ID del centro.
+”CTR_DESCRIPCION” de la tabla ”Centro”. Ya que este hace referencia a la referencia  del centro.
+”CTR_TELEFONO1” de la tabla”Centro”. Ya que este hace referencia al
+telefono del centro.
+”CTR_UBICACION” de la tabla”Centro”. Ya que este hace referencia a la 
+ubicación del centro.
+
+Perspectiva “Solicitud”
+-“FMO_CODIGO” de la tabla “Item” ya que este hace referencia al código de la solicitud.
+-“ITM_OBSERVACIÓN” de la tabla “Item” ya que hace referencia a las observaciones de la solicitud.
+
+
+
+
+
+Cantidad de tipos de fallas asociadas
+
+Hecho7: Falla
+
+Correspondencia 
+
+La tabla “Item “se relaciona con la perspectiva  “Falla”.
+El campo “HIS_FECHA_INICIO “de la tabla  “intem_Historico” se relaciona con la perspectiva  “Tiempo”.
+El campo “HIS_OBSERVACION“ de la tabla “Item_Historico” se relaciona con la indicador “Cantidad de tipos”.
+
+
+Granularidad
+
+Perspectiva  “Tiempo”.
+” HIS_FECHA_INICIO” de la tabla ” intem_Historico”. Ya que este hace referencia al mes en que se realizó la solicitud. De esta misma se pueden obtener los datos Año , Mes  y dia de la solicitud.
+Perspectiva “Falla”.
+”FMO_CODIGO”de la tabla ”item”. Ya que este hace referencia al
+id del formato, unido con ”SVO_CODIGO”de la tabla ”item”. Ya que este hace referencia al id del servicio, unido con ”LCD_CODIGO”de la tabla ”item”. Ya que este hace referencia al id de la localidad, todo esto para  formar el ID completo de la tabla “Item”
+”ITM_OBSERVACION” de la tabla ”Item”. Ya que este hace referencia al
+A cualquier observación que se haya hecho al iten.
+
+
+
+
+
+Descripción de los trabajos que sobrepasan la cantidad estimada de materiales y mano de obra. 
+
+Hecho8: trabajos 
+
+Correspondencia
+
+La tabla “Item “se relaciona con la perspectiva  “Trabajos”.
+El campo “HIS_FECHA_INICIO “de la tabla  “intem_Historico” se relaciona con la perspectiva  “Tiempo”.
+La tabla “Asig_Persona” se relaciona con el indicador “Exeso de manos de obra”.
+La tabla “Asig_Material” se relaciona con el indicador “Exeso de materia”.
+
+
+Granularidad
+
+Perspectiva  “Trabajos”.
+” HIS_FECHA_INICIO” de la tabla ” intem_Historico”. Ya que este hace referencia al mes en que se realizó la solicitud. De esta misma se pueden obtener los datos Año , Mes  y dia de la solicitud.
+
+Perspectiva “Trabajos”.
+”FMO_CODIGO”de la tabla ”item”. Ya que este hace referencia al
+id del formato, unido con ”SVO_CODIGO”de la tabla ”item”. Ya que este hace referencia al id del servicio, unido con ”LCD_CODIGO”de la tabla ”item”. Ya que este hace referencia al id de la localidad, todo esto para  formar el ID completo de la tabla “Item”
+”ITM_OBSERVACION” de la tabla ”Item”. Ya que este hace referencia al
+A cualquier observación que se haya hecho al ítem.
+
+
+
+
+
+Cantidad de solicitudes atendidas, rechazadas y en espera mensualmente.
+
+
+Hecho9: Solicitudes
+
+Correspondencia
+
+La tabla “Estatus “se relaciona con la perspectiva  “Estatus”.
+El campo “HIS_FECHA_INICIO “de la tabla  “intem_Historico” se relaciona con la perspectiva  “Tiempo”.
+La tabla “Item_Historico” se relaciona con el indicador “Cantidad de Solicitudes”.
+
+Granularidad
+
+Perspectiva  “Tiempo”.
+” HIS_FECHA_INICIO” de la tabla ” intem_Historico”. Ya que este hace referencia al mes en que se realizó la solicitud. De esta misma se pueden obtener los datos Año , Mes  y dia de la solicitud.
+Perspectiva “Estatus”.
+”ETU_CODIGO” de la tabla ”Estatus”. Ya que este hace referencia al
+id del estatus
+”ETU_NOMBRE” de la tabla ”Estatus”. Ya que este hace referencia al
+Nombre del estatus.
+”ETU_DESCRIPCION” de la tabla ”Estatus”. Ya que este hace referencia a la Descripción del estatus
+
+
+
+
+
+Centro de costo que es atendido más rápido y aquel en donde los tiempos de atención son más largos para responder sus solicitudes.
+
+ 
+Hecho10: Atención:
+
+Correspondencia
+
+La tabla “centro “se relaciona con la perspectiva  “Centro de costo”.
+El campo  “HIS_FECHA_INICIO”  y   el campo  “HIS_FECHA_FIN” de la tabla “inten_Historico “se relacionan con el indicador “Tiempo de atención “.
+
+
+Granularidad
+
+Perspectiva  “Centro de Costo”.
+”CTR_ID_CENTRO” de la tabla ”Centro”. Ya que este hace referencia al
+ID del centro.
+”CTR_DESCRIPCION” de la tabla ”Centro”. Ya que este hace referencia a la referencia  del centro.
+”CTR_TELEFONO1” de la tabla”Centro”. Ya que este hace referencia al
+telefono del centro.
+”CTR_UBICACION” de la tabla”Centro”. Ya que este hace referencia a la 
+ubicación del centro.
